@@ -39,10 +39,7 @@ continueInput();
 
 console.log("It's about 11:30AM and it's been quite a day!")
 
-beyondKFCEncounter();
-
-console.log("You're done for the day")
-console.log("now YOU are Hungry. What do you do?")
+console.log("To be continued.")
 
 
 
@@ -59,10 +56,12 @@ function butcherEncounter(){
         console.log("You enthusiastically bark at the shop owner.")
         console.log("I wan't meat!!")
         console.log("You were perhaps too aggressive and the butcher gets angry. You run off to avoid being butchered yourself.")
+        console.log("The Butcher is now your enemy.")
         enemies.push("Butcher")
     }else if(butcherDecision == "S"){
         console.log("You sit and stare at the Butcher while wagging your tail patiently.")
         console.log("The Butcher smiles and reaches into his apron for a succulent goose liver. It's actually a delicacy in France.")
+        console.log("The Butcher is now your friend.")
         friends.push("Butcher")
         playerItems.push("Tasty Goose Liver")
     }else{
@@ -74,10 +73,10 @@ function butcherEncounter(){
     function dogYoga(){
         const yogaDecision = prompt('Time to get that blood flowing! Enter [D] to "Downward Dog" or [C] to "Cat pose". ')
         console.log(`${username} chose ${yogaDecision}`);
-        if(yogaDecision == "D"){
+        if(yogaDecision == "D" && "d"){
             console.log("You allow gravity to increase blood flow and improve circulation.")
             console.log("Praise the sun!")
-        }else if(yogaDecision == "C"){
+        }else if(yogaDecision == "C" && "c"){
             console.log("You give your body the ever-relaxing feline stretch. It feels good but you'd be embarassed if any of your dog bros saw you.")
         }else{
             console.log("The drool begins to slide down your chin as you gaze into the abyss. As you reflect upon your shortcomings and potentially erroneous choices that led up to this moment-- a feeling of dread creeps over you. Maybe you should pick one of the available choices.")
@@ -103,8 +102,8 @@ function butcherEncounter(){
             }
         }
         for(let i = 0; i < friends.length; i++){
-            console.log(`Your friends are ${enemies[i]}`)
-            if(enemies.length === 0){
+            console.log(`Your friends are ${friends[i]}`)
+            if(friends.length === 0){
                 console.log("You have no friends. Sorry you had to find out this way. :(")
             }
         }
@@ -128,7 +127,7 @@ function butcherEncounter(){
             console.log("Without warning the cat hisses and scratches your face with his claw. Ouch!")
             console.log("You are startled and run in the opposite direction. You should have known better.")
             enemies.push("Cat")
-            playerHealth += -10
+            playerHealth += -40
         }else{
             console.log("The drool begins to slide down your chin as you gaze into the abyss. As you reflect upon your shortcomings and potentially erroneous choices that led up to this moment-- a feeling of dread creeps over you. Maybe you should pick one of the available choices.")
             catEncounter();
