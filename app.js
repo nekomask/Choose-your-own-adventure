@@ -31,11 +31,13 @@ console.log("You've been around the block a few times and know that cats can be 
 
 catEncounter();
 
+continueInput();
+
 console.log("It's time we do a wellness-check.")
 
-displayStatus();
-
 continueInput();
+
+displayStatus();
 
 console.log("It's about 11:30AM and it's been quite a day!")
 
@@ -96,13 +98,13 @@ function butcherEncounter(){
                 console.log("You have no money. You are a dog.")
         }
         for(let i = 0; i < enemies.length; i++){
-            console.log(`Your enemies are ${enemies[i]}`)
+            console.log(`You are mortal enemies are ${enemies[i]}`)
             if(enemies.length === 0){
                 console.log("You have no enemies. Aren't you the popular one!")
             }
         }
         for(let i = 0; i < friends.length; i++){
-            console.log(`Your friends are ${friends[i]}`)
+            console.log(`You are friends with ${friends[i]}`)
             if(friends.length === 0){
                 console.log("You have no friends. Sorry you had to find out this way. :(")
             }
